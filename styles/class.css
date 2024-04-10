@@ -1,0 +1,269 @@
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+h1,
+h2,
+h3 {
+    color: #333;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Запрет на выделение текста */
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Шапка */
+header {
+    background-color: #007bff;
+    color: white;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 5px;
+}
+
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.lessons {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#sidebar {
+    float: left;
+    width: 150px;
+}
+
+/* Отображение активной кнопки */
+#sidebar button.active {
+    background-color: #f0f0f0;
+}
+
+/* Стили для неактивных кнопок */
+#sidebar button {
+    background-color: #fff; /* Белый фон для неактивной кнопки */
+    border: 1px solid #ccc; /* Серая граница для неактивной кнопки */
+    color: #555; /* Темно-серый цвет текста для неактивной кнопки */
+}
+
+/* Стили для активной кнопки */
+#sidebar button.active {
+    background-color: #e7e7e7; /* Светло-серый фон для активной кнопки */
+    border-color: #aaa; /* Темно-серая граница для активной кнопки */
+    color: #333; /* Черный цвет текста для активной кнопки */
+    font-weight: bold; /* Жирный шрифт для текста активной кнопки */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Увеличиваем тень для выделения активной кнопки */
+}
+
+#content {
+    margin-left: 170px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    border-radius: 5px;
+    overflow-y: auto;
+    max-height: calc(100vh - 100px);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+button {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #ffecd2 0%, #ffe3c7 100%);
+    cursor: pointer;
+    color: #555;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ffe3c7 0%, #ffecd2 100%);
+    color: #333;
+    /* Затемняем текст при наведении для лучшей читаемости */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Увеличиваем тень при наведении */
+}
+
+button span {
+    white-space: normal;
+    text-align: center;
+}
+
+.class-number,
+.class-label {
+    white-space: normal;
+    text-align: center;
+}
+
+.class-number {
+    font-size: 25px;
+}
+
+.class-label {
+    font-size: 14px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Футер */
+footer {
+    background: linear-gradient(135deg, #111111, #333333);
+    color: #ffffff;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.footer-section h3,
+.footer-section a,
+.footer-section p {
+    color: #ffffff;
+}
+
+/* Адаптивность и кастомные стили */
+@media (min-width: 768px) {
+    .container {
+        padding: 20px 40px;
+    }
+
+    nav ul li {
+        margin: 0 25px;
+    }
+
+    .footer-section {
+        display: inline-block;
+        vertical-align: top;
+        width: 23%;
+        margin: 0 1%;
+        text-align: left;
+    }
+
+    .blog-post img {
+        height: 150px;
+    }
+
+    #teachersList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* СКРОЛЛБАР УРОКОВ */
+#content::-webkit-scrollbar {
+    width: 10px;
+}
+
+#content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+#content::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #e6c3a0 0%, #d3b092 100%);
+    border-radius: 10px;
+}
+
+#content::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #d3b092 0%, #e6c3a0 100%);
+}
+
+#content {
+    scrollbar-width: thin;
+    scrollbar-color: #d3b092 #f1f1f1;
+}
+
+
+/* ОБЩИЙ СКРОЛЛБАР */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 1px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fcb69f93;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #d1917f 0%, #c47c5a 100%);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #c47c5a 0%, #d1917f 100%);
+}
